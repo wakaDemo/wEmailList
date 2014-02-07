@@ -1,0 +1,26 @@
+{
+    "name": "wEmailList",
+    "author": "Widget Developer",
+	"contributors": [
+	    "Developer 1", 
+	    "Developer 2"
+	],
+    "version": "1.0.0",
+    "copyright": "(c) 2013 Widget Developer",
+	"repository": {
+	    "type": "git",
+	    "url": "https://github.com/developer/Widget.git"
+	},
+	"keywords": ["wakanda", "widget"],
+	"engines": {"wakanda" : ">= 7"},
+	"license": "MIT", 
+    "loadDependencies": [
+    	{"id": "Widget_V2"},
+	    {"id": "wListView/package.json", "version": "1.0.0", "path": "WIDGETS_CUSTOM"},
+	    {"id": "wEmailList/templates.js", "version": "1.0.0", "path": "WIDGETS_CUSTOM"},
+	    {"id": "wEmailList/utils.js", "version": "1.0.0", "path": "WIDGETS_CUSTOM"},
+        {"id": "wEmailList/widget.js", "version": "1.0.0", "path": "WIDGETS_CUSTOM"},
+        {"id": "wEmailList/css/widget.css", "version": "1.0.0", "path": "WIDGETS_CUSTOM"},
+        {"id": "wEmailList/designer.js", "studioOnly": true, "version": "1.0.0", "path": "WIDGETS_CUSTOM"}
+    ]
+}
