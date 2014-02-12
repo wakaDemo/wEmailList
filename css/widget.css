@@ -1,75 +1,3 @@
-/** 
- * Widget ListView
- *
- */
-.waf-widget.waf-wlistview {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    
-    -webkit-overflow-scrolling: touch;
-}
-
-.waf-widget.waf-wlistview li {
-    position: relative;
-    width:  100%;
-
-    overflow: hidden;
-
-    border-style: inherit;
-    border-color: inherit;
-}
-.waf-widget.waf-wlistview li::after {
-    content: '';
-    display: table;
-    clear: both;
-}
-.waf-widget.waf-wlistview li .content {
-    position: absolute;
-    top:    0;
-    left:   0;
-    width:  100%;
-    height: 100%;
-}
-.waf-widget.waf-wlistview li .content.waf-state-swyped {
-    left: -50%;
-}
-.waf-widget.waf-wlistview li img {
-    display: block;
-    float: left;
-}
-.waf-widget.waf-wlistview li h1,
-.waf-widget.waf-wlistview li h2,
-.waf-widget.waf-wlistview li h3,
-.waf-widget.waf-wlistview li h4,
-.waf-widget.waf-wlistview li h5,
-.waf-widget.waf-wlistview li h6,
-.waf-widget.waf-wlistview li p {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-
-    margin: 0;
-}
-
-/* OLD */
-
-.waf-widget.waf-wlistview .loading { 
-  cursor: wait;
-  background-color: rgba(0,0,0,0);
-  opacity: .8;
-  border-radius: 50px;
-  margin: 5% auto;
-  animation: loading .5s infinite linear;
-  -moz-animation: loading .5s infinite linear;
-  -webkit-animation: loading .5s infinite linear;
-  border: 5px solid red;
-  border-top: 5px solid rgba(0,0,0,0);
-  border-left: 5px solid rgba(0,0,0,0);
-  width: 30px;
-  height: 30px;
-  display:block;
-  margin:auto;
-}
 .waf-wlistview li.selected{
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e0eaff), to(#e1e4f5));
   background-image: -webkit-linear-gradient(top, #e0eaff 0%, #e1e4f5 100%);
@@ -91,11 +19,6 @@
     font-weight:normal;
 }
 
-.waf-wlistview li.dragging{
-    -webkit-transition-property:none;
-}
-
-/* stuff */
 .waf-widget.waf-wlistview li date, .waf-widget.waf-wlistview li .attachment{
     width:26px;
     height:26px;
@@ -107,7 +30,7 @@
 }
 
 .waf-widget.waf-wlistview li date{
-    width:48px;
+    width:62px;
     text-align:right;
 }
 
@@ -132,35 +55,22 @@
     text-align:center;
 }
 
-button::-moz-focus-inner,
-    input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-}
-
 .waf-widget.waf-wlistview li .star{
-    border:none;
-    padding:0;
-    width:16px;
-    height:16px;
-    position:absolute;
-    right:0;
-    background:transparent url(/images/star.png) no-repeat;
-    background-position:bottom left;
-    margin:auto 8px;
-    clear:both;
+    border: none;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    right: -8px;
+    background: transparent url(/images/star.png) no-repeat;
+    background-position: 12px -35px;
+    margin: auto 8px;
+    clear: both;
+    top: 23px;
+    background-repeat: no-repeat;
+    z-index:10;
 }
 
 .waf-widget.waf-wlistview li .stared{
-    background-position:top left;
-}
-
-#waf-body.waf-theme .waf-widget.waf-wlistview{
-    border-radius:0;
-}
-
-.waf-widget.waf-wlistview li p{
-    padding-right:100px;
-    position:relative;
-    line-height:1.42;
+    background-position: 12px 13px;
 }

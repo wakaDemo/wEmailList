@@ -22,10 +22,12 @@ function(Widget, wListView, templates, Utils) {
         },
         
         bindEvents: function() {
-            jQuery(this.node).on('tap', 'button.star', function(event) {
+            jQuery(this.node).on('click', 'button.star', function(event) {
                 var row = $(event.currentTarget);
                 
                 row.toggleClass('stared');
+                
+                return false;
             });
         }
     });

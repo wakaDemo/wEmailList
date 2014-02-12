@@ -18,14 +18,20 @@ WAF.define('wEmailList/utils', function() {
         formatDate: function(dateStr) {
             var date = new Date(),
                 today = new Date(),
-                diff = 0;
+                diff = 0,
+                month,
+                day,
+                hours,
+                minutes;
             
             date.setTime(Date.parse(dateStr));
             diff = today - date;
             
             // same day
             if (today.getDay() === date.getDay() && today.getMonth() === date.getMonth() && today.getYear() === date.getYear()) {
-                return date.getHours() + ':' + date.getMinutes();
+                hours = date.getHours();
+                minutes = date.getMinutes();
+                return (hours < 10 ? "0" + hours : hours) + ':' + (minutes < 10 ? "0" + minutes : minutes);
             } else if (diff < 172800000 && today.getDay() !== date.getDay()) {
                 // < 2j
                 return 'hier';
@@ -33,7 +39,10 @@ WAF.define('wEmailList/utils', function() {
                 // < 10j
                 return date.getDate() + ' ' + months[date.getMonth()];
             } else {
-                return date.getDate() + '/' + date.getMonth() + '/' + date.getYear();
+                month = date.getMonth() + 1;
+                day = date.getDate();
+                
+                return (day > 9 ? day : "0" + day) + '/' + (month < 10 ? "0" + month : month) + '/' + date.getFullYear();
             }
         },
         
