@@ -7,7 +7,7 @@ WAF.define('wEmailList/templates', function() {
             },
             {
                 description: 'EMail List 2',
-                template: '<li{{#if isRead}} class="read"{{/if}}><date>{{date}}</date>{{#if attachment}}<span class="attachment"></span>{{/if}}<img src="{{avatar}}" /> <h3>{{email}}</h3><p><button class="star"></button>{{text}}</p><span class="tag">{{tag}}</span></li>'
+                template: '<li{{#if isRead}} class="read"{{/if}}><date>{{date}}</date>{{#if attachment}}<span class="attachment"></span>{{/if}}<img src="{{avatar}}" /> <h3>{{email}}</h3><button class="star"></button><p>{{text}}</p><span class="tag">{{tag}}</span></li>'
             },
             {
                 description: 'EMail List 3',
